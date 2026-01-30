@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shadow of Adulthood | PhD Candidate Research</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root { --gold: #C5A059; --dark: #050505; --gray: #121212; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark); color: #d1d1d1; scroll-behavior: smooth; }
+        h1, h2, h3, h4, .serif { font-family: 'Cormorant Garamond', serif; }
+        
+        .gold-text { color: var(--gold); }
+        .bg-shadow { background-color: var(--gray); }
+        
+        /* Estilo de botones de descarga */
+        .btn-action { 
+            border: 1px solid var(--gold); 
+            padding: 0.6rem 1.2rem; 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.15em;
+            transition: all 0.4s ease;
+            display: inline-block;
+        }
+        .btn-action:hover { background: var(--gold); color: black; box-shadow: 0 0 15px var(--gold); }
+
+        /* Efecto de fondo Hero (Grabado de Doré sugerido) */
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(5,5,5,0.65), rgba(5,5,5,0.90)), 
+                url('img/dore-fondo.jpg'); /* <--- Esta es la ruta a tu carpeta */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Animación suave para las secciones */
+        section { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        section.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 bg-black/90 border-b border-white/5 p-4 backdrop-blur-md">
+        <div class="container mx-auto flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
+            <div class="gold-text font-bold">The Shadow of Adulthood</div>
+            <div class="hidden lg:flex space-x-8">
+                <a href="#investigacion" class="hover:text-white transition">Ikerketa</a>
+                <a href="#outputs" class="hover:text-white transition">Biltzarrak</a>
+                <a href="#sobre-mi" class="hover:text-white transition">Niri buruz</a>
+                <a href="#contacto" class="hover:text-white transition">Kontaktua</a>
+            </div>
+            <div class="flex space-x-3 items-center">
+                <a href="index.html"
+            class="hover:text-gold transition
+            cursor-pointer">EN</a>
+                <span class="opacity-20">|</span>
+                <a href="es.html"
+            class="hover:text-gold transition
+            cursor-pointer">ES</span> 
+                <span class="opacity-20">|</span>
+                <a href="eu.html"
+            class="hover:text-gold transition
+            cursor-pointer">EU</class=>
+            </div>
+        </div>
+    </nav>
+
+    <header class="h-screen flex items-center justify-center px-6 hero-bg">
+        <div class="text-center">
+            <p class="uppercase tracking-[0.4em] text-[10px] mb-4 opacity-50">Literatura Konparatua · Doktorego Ikerketa</p>
+            <h1 class="text-5xl md:text-8xl text-white mb-4">The Shadow of <span class="italic font-light text-gray-400">Adulthood</span></h1>
+            <p class="gold-text italic text-xl md:text-2xl mb-8">Darkness as a Sign of Maturity in J.K. Rowling's Harry Potter</p>
+            <div class="h-16 w-px bg-gold mx-auto opacity-50"></div>
+        </div>
+    </header>
+
+    <section id="investigacion" class="py-32 container mx-auto px-6 max-w-5xl">
+        <h2 class="text-4xl gold-text mb-16 italic text-center">Iluntasunaren Denbora-Lerroa</h2>
+        <div class="grid md:grid-cols-3 gap-16">
+            <div class="text-center space-y-4">
+                <div class="text-5xl opacity-20 serif italic">I</div>
+                <h3 class="text-2xl text-white">Hasiera</h3>
+                <p class="text-sm opacity-60 leading-relaxed">Sorgin Harria: Ibilbidearen Ataria. Iluntasuna hasierako misterio eta haurtzaroko jakin-minaren objektu.</p>
+            </div>
+            <div class="text-center space-y-4">
+                <div class="text-5xl opacity-40 serif italic">IV</div>
+                <h3 class="text-2xl text-white">Inflexio Puntua</h3>
+                <p class="text-sm opacity-60 leading-relaxed">Suaren Kopa: Benetako Jaitsiera. Heriotza eta Iluntasuna = Xalotasunaren Heriotza.</p>
+            </div>
+            <div class="text-center space-y-4">
+                <div class="text-5xl opacity-80 serif italic">VII</div>
+                <h3 class="text-2xl text-white">Helduaroa</h3>
+                <p class="text-sm opacity-60 leading-relaxed">Herioaren Erlikiak: Azken Ataria. Iluntasunaren eta Heldutasunaren Sinbiosia Sakrifizioaren bidez.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="outputs" class="py-32 bg-shadow px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl gold-text mb-12 italic border-b border-white/5 pb-4">Kongresuak</h2>
+            <div class="space-y-10">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2025 · Jarraipen-jardunaldiak</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Urteko Jarraipena (UPV/EHU)</h4>
+                        <p class="text-sm opacity-50">Orainarteko garapena: Idazlearen biografia eta atal teorikoa.</p>
+                    </div>
+                    <a href="docs/seguimiento-2025.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>
+                </div>
+               <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2025 · Myth in the Arts IX</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">To Death and Beyond: a comparative analysis of Harry Potter's Death in J.K.Rowling's <i>Deathly Hallows</i> and John Donne's 'Sonnet X'</h4>
+                        <p class="text-sm opacity-50">Bi lan hauen analisi konparatiboa, Heriotzaren kontzeptuaren interpretazio kristauaren pean</p>
+                    </div>
+                    <a href="docs/myth_arts_2025.pdf" class="btn-action mt-4 md:mt-0">
+                        <i class="fas fa-download mr-2"></i> PPT
+                    </a>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2024 · Myth in the Arts VIII</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">La Tragedia de Aristóteles en <i>Star Wars: Episodio III - La Venganza de los Sith</i></h4>
+                        <p class="text-sm opacity-50">Anakin Skywalker Aristotelesen «heroi tragiko» baten definizioaren pean ote dagoen aztertu da</p>
+                    </div>
+                    <a href="docs/myth_arts_2024.pdf" class="btn-action mt-4 md:mt-0">
+                        <i class="fas fa-download mr-2"></i> PPT
+                    </a>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2023 · Myth in the Arts VII</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Giants, Merpeople and Centaurs</h4>
+                        <p class="text-sm opacity-50"><i>Harry Potterren</i> izaki antropomorfikoen analisi multikulturala</p>
+                    </div>
+                    <a href="docs/myth_arts_2023.pdf" class="btn-action mt-4 md:mt-0">
+                        <i class="fas fa-download mr-2"></i> PPT
+                    </a>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2022 · Myth in the Arts VI</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">The Shadow of Adulthood: Darkness as a Sign of Maturity in J.K.Rowling's Philosopher's Stone and Deathly Hallows</h4>
+                        <p class="text-sm opacity-50">Nire doktorego proiektuaren hastapena</i></p>
+                    </div>
+                    <a href="docs/myth_arts_2022.pdf" class="btn-action mt-4 md:mt-0">
+                        <i class="fas fa-download mr-2"></i> PPT
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="py-32 container mx-auto px-6 max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-20 items-start">
+            
+            <div class="space-y-8">
+                <div class="flex items-center space-x-6">
+                    <div class="w-32 h-32 border border-gold p-1">
+                        <img src="img/perfil.jpg" alt="Foto de perfil" 
+                            class="grayscale hover:grayscale-0 transition-all duration-700 w-full h-full object-cover relative z-10 cursor-pointer">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl gold-text italic">Ikertzaileari buruz</h2>
+                        <p class="text-xs uppercase tracking-tighter opacity-50">PhD Candidate @ UPV/EHU</p>
+                    </div>
+                </div>
+                <p class="text-gray-300 font-light leading-relaxed">
+                    Gaur egun, doktoregoko bigarren mailako ikaslea naiz. Konbentzio gotikoak eta <i>Descensus Ad Inferos</i> mito klasikoa J.K.Rowlingren <i>Harry Potter</i> liburu-sailean nola erabiltzen diren aztertzen dut, 
+                    hazkunde mentala irudikatzeko, eta ea korrelaziorik dagoen ilunpearen eta antzeko elementuen itxuraren eta Harryren garapen psikologikoaren artean.
+                    Ingeles Hizkuntzaren zein Literaturaren zale amorratua naiz, eta nire ikerketa esparru nagusi gisa ez ezik, zaletasun pertsonal gisa ere ikusten ditut. Badira urte batzuk ESOLeko lanaldi partzialeko irakasle gisa lan egiten dudala, eta konturatu naiz irakasteko bezainbesteko grina dudala irakurtzeko. 
+                    Mende honetako garapen azkarreko teknologiek literaturaren zein hezkuntzaren munduan nola eragin lezaketen ere interesatzen zait.
+                </p>
+                <p class="text-sm opacity-60">
+                    Tutoregoa: <b>Dr. Alejandro Martínez Sobrino</b> (UPV/EHU) eta <b>Dra. Miriam Borham Puyal</b> (USAL).
+                </p>
+                
+                <div class="flex space-x-6 text-xl pt-4">
+                    <a href="https://www.linkedin.com/in/leire-garc%C3%ADa-alonso/" target="_blank" class="hover:gold-text transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://ehu.academia.edu/LeireGarc%C3%ADaAlonso" target="_blank" class="hover:gold-text transition"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://orcid.org/0009-0008-8913-8722" target="_blank" class="hover:gold-text transition"><i class="fab fa-orcid"></i></a>
+                    <a href="https://www.instagram.com/leiregaal/" target="_blank" class="hover:gold-text transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div id="contacto" class="bg-white/5 p-10 border border-white/5 backdrop-blur-sm">
+                <h3 class="text-2xl mb-8 italic gold-text">Kontaktua</h3>
+                <form action="https://formspree.io/f/mvzrqqdg" method="POST" class="space-y-6">
+                    <input type="text" name="name" placeholder="Izen-abizenak" class="w-full bg-transparent border-b border-white/10 py-3 focus:border-gold outline-none transition text-sm" required>
+                    <input type="email" name="email" placeholder="Lan emaila" class="w-full bg-transparent border-b border-white/10 py-3 focus:border-gold outline-none transition text-sm" required>
+                    <textarea name="message" rows="4" placeholder="Zure mezua" class="w-full bg-transparent border-b border-white/10 py-3 focus:border-gold outline-none transition text-sm" required></textarea>
+                    <button type="submit" class="btn-action w-full">Mezua bidali</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center">
+        <p class="text-[10px] tracking-[0.4em] opacity-30 uppercase">
+            UPV/EHU · Universidad de Salamanca · 2026
+        </p>
+    </footer>
+
+    <script>
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
