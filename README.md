@@ -1,4 +1,4 @@
-# The Shadow of Adulthood: Darkness as a Sign of Maturity in J.K. Rowling's Harry Potter
+# The Shadow of Adulthood: Gothic Liminality and Katabasis in Harry Potter’s journey
 
 ## Resumen del Proyecto de Tesis
 Este proyecto de investigación, enmarcado en el programa de doctorado de **Literatura Comparada** de la **UPV/EHU**, explora la correlación entre el proceso de maduración psicológica del protagonista y la evolución de los elementos de oscuridad física y simbólica en la saga.
@@ -17,7 +17,6 @@ Actualmente, el proyecto se encuentra en fase de desarrollo de los capítulos ce
 ## Dirección Académica
 * **Tutor:** Alejandro Martínez Sobrino (UPV/EHU).
 * **Co-directora:** Miriam Borham Puyal (Universidad de Salamanca).
-* **Grupo de Investigación:** "Relaciones políticas y categorías sociales en Grecia y Roma".
 
 ## Difusión y Congresos
 Este repositorio también sirve como repositorio de los materiales (PPTs y abstracts) presentados en congresos académicos desde 2022. Puedes acceder a ellos a través de la sección de **Outputs** en la página web oficial del proyecto.
