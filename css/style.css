@@ -28,12 +28,12 @@
     .btn-action:hover { background: var(--gold); color: black; box-shadow: 0 0 15px var(--gold); }
 
     /* Fondo Doré */
-    .hero-bg {
-        background: linear-gradient(to bottom, rgba(5,5,5,0.7), rgba(5,5,5,0.9)), 
-            url('img/dore-fondo.jpg');
-        background-size: cover;
-        background-position: center;
-    }
+.hero-bg {
+    background: linear-gradient(to bottom, rgba(5,5,5,0.7), rgba(5,5,5,0.9)), 
+        url('../img/dore-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
     /* --- ANIMACIÓN DE LAS BARRAS --- */
     @keyframes slideIn {
