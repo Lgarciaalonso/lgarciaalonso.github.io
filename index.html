@@ -44,7 +44,7 @@
         background-position: center;
     }
 
-    /* --- ANIMACIÓN DE LAS BARRAS (CORREGIDA Y SIMPLIFICADA) --- */
+    /* --- ANIMACIÓN DE LAS BARRAS --- */
     @keyframes slideIn {
         from { width: 0; }
     }
@@ -54,7 +54,6 @@
         background-color: var(--gold);
         box-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
         border-radius: 9999px;
-        /* IMPORTANTE: Usamos la variable como ancho final */
         width: var(--target-width); 
         animation: slideIn 2s cubic-bezier(0.1, 0.5, 0.5, 1) forwards;
     }
@@ -176,8 +175,16 @@
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
-                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2025 · Jornadas de Seguimiento</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Anual Review of the Project (UPV/EHU)</h4>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2026 · Progress Seminar</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Anual Review of the Project (EHU)</h4>
+                        <p class="text-sm opacity-50">Progress until now: Biography of the Author & Theoretical Framework (2n Draft), in-depth summary of the novles (1st draft).</p>
+                    </div>
+                    <a href="docs/seguimiento-2025.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2025 · Progress Seminar</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Anual Review of the Project (EHU)</h4>
                         <p class="text-sm opacity-50">Progress until now: Biography of the Author & Theoretical Framework (1st Draft).</p>
                     </div>
                     <a href="docs/seguimiento-2025.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>

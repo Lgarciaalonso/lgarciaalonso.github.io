@@ -44,7 +44,7 @@
         background-position: center;
     }
 
-    /* --- ANIMACIÓN DE LAS BARRAS (CORREGIDA Y SIMPLIFICADA) --- */
+    /* --- ANIMACIÓN DE LAS BARRAS --- */
     @keyframes slideIn {
         from { width: 0; }
     }
@@ -54,7 +54,6 @@
         background-color: var(--gold);
         box-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
         border-radius: 9999px;
-        /* IMPORTANTE: Usamos la variable como ancho final */
         width: var(--target-width); 
         animation: slideIn 2s cubic-bezier(0.1, 0.5, 0.5, 1) forwards;
     }
@@ -95,7 +94,7 @@
             <div class="text-center space-y-4">
                 <div class="text-5xl opacity-20 serif italic">I</div>
                 <h3 class="text-2xl text-white">Hasiera</h3>
-                <p class="text-sm opacity-60 leading-relaxed">Sorgin Harria: Ibilbidearen Ataria. Iluntasuna hasierako misterio eta haurtzaroko jakin-minaren objektu.</p>
+                <p class="text-sm opacity-60 leading-relaxed">Sorgin Harria: Ibilbidearen Ataria. Iluntasuna hasierako misterio eta haurtzaroko jakin-minaren objektu gisa.</p>
             </div>
             <div class="text-center space-y-4">
                 <div class="text-5xl opacity-40 serif italic">IV</div>
@@ -175,9 +174,17 @@
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2026 · Jarraipen-jardunaldiak</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Urteko Jarraipena (EHU)</h4>
+                        <p class="text-sm opacity-50">Orain arteko garapena: Idazlearen biografia eta atal teorikoa (bigarren zirriborroa), liburuen laburbilduma (lehen zirriborroa).</p>
+                    </div>
+                    <a href="docs/seguimiento-2025.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2025 · Jarraipen-jardunaldiak</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Urteko Jarraipena (UPV/EHU)</h4>
-                        <p class="text-sm opacity-50">Orainarteko garapena: Idazlearen biografia eta atal teorikoa.</p>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Urteko Jarraipena (EHU)</h4>
+                        <p class="text-sm opacity-50">Orainarteko garapena: Idazlearen biografia eta atal teorikoa (lehen zirriborroa).</p>
                     </div>
                     <a href="docs/seguimiento-2025.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>
                 </div>

@@ -44,7 +44,7 @@
         background-position: center;
     }
 
-    /* --- ANIMACIÓN DE LAS BARRAS (CORREGIDA Y SIMPLIFICADA) --- */
+    /* --- ANIMACIÓN DE LAS BARRAS --- */
     @keyframes slideIn {
         from { width: 0; }
     }
@@ -54,7 +54,6 @@
         background-color: var(--gold);
         box-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
         border-radius: 9999px;
-        /* IMPORTANTE: Usamos la variable como ancho final */
         width: var(--target-width); 
         animation: slideIn 2s cubic-bezier(0.1, 0.5, 0.5, 1) forwards;
     }
@@ -90,12 +89,12 @@
     </header>
 
     <section id="investigacion" class="py-32 container mx-auto px-6 max-w-5xl">
-        <h2 class="text-4xl gold-text mb-16 italic text-center">Linea Temporal de la Oscuridad</h2>
+        <h2 class="text-4xl gold-text mb-16 italic text-center">Linea Temporal de la oscuridad</h2>
         <div class="grid md:grid-cols-3 gap-16">
             <div class="text-center space-y-4">
                 <div class="text-5xl opacity-20 serif italic">I</div>
                 <h3 class="text-2xl text-white">El Origen</h3>
-                <p class="text-sm opacity-60 leading-relaxed">La Piedra Filosofal: El Umbral Viaje. La Oscuridad como misterio inicial y objeto de la curiosidad infantil.</p>
+                <p class="text-sm opacity-60 leading-relaxed">La Piedra Filosofal: El Umbral del Viaje. La Oscuridad como misterio inicial y objeto de la curiosidad infantil.</p>
             </div>
             <div class="text-center space-y-4">
                 <div class="text-5xl opacity-40 serif italic">IV</div>
@@ -175,8 +174,16 @@
                 </div>
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
+                        <span class="text-[10px] tracking-widest opacity-40 uppercase">2026 · Jornadas de Seguimiento</span>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Seguimiento Anual de Tesis (EHU)</h4>
+                        <p class="text-sm opacity-50">Presentación del estado actual: Segundo borrador del capítulo de la autora, marco teórico, resumen narrativo de las novelas.</p>
+                    </div>
+                    <a href="docs/seguimiento-2025.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>
+                </div>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
+                    <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2025 · Jornadas de Seguimiento</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Seguimiento Anual de Tesis (UPV/EHU)</h4>
+                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Seguimiento Anual de Tesis (EHU)</h4>
                         <p class="text-sm opacity-50">Presentación del estado actual: Capítulo de la autora y marco teórico.</p>
                     </div>
                     <a href="docs/seguimiento-2025.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>
@@ -196,7 +203,7 @@
                     <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2024 · Myth in the Arts VIII</span>
                         <h4 class="text-xl text-white group-hover:gold-text transition italic">La Tragedia de Aristóteles en <i>Star Wars: Episodio III - La Venganza de los Sith</i></h4>
-                        <p class="text-sm opacity-50">Se analizó si Anakin Skywalker coincide con los parametros del 'heroe trágico' de Aristóteles</p>
+                        <p class="text-sm opacity-50">Se analizó si Anakin Skywalker se ajusta a la definición aristotélica de héroe trágico.</p>
                     </div>
                     <a href="docs/myth_arts_2024.pdf" class="btn-action mt-4 md:mt-0">
                         <i class="fas fa-download mr-2"></i> PPT
