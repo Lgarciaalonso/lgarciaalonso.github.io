@@ -4,13 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Shadow of Adulthood | Doktorego-ikerketa</title>
+    <meta name="description" content="The Shadow of Adulthood: doctoral research on Gothic liminality and katabasis in J. K. Rowling's Harry Potter saga.">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    gold: '#C5A059',
+                    shadow: '#121212'
+                }
+            }
+        }
+    };
+// Cierra el menú al pulsar fuera de él
+document.addEventListener('click', event => {
+    if (
+        !mobileMenu.contains(event.target) &&
+        !menuButton.contains(event.target)
+    ) {
+        closeMobileMenu();
+    }
+});
+</script>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
-    :root { --gold: #C5A059; --dark: #050505; --gray: #121212; }
+    :root {
+    --gold: #C5A059;
+    --dark: #050505;
+}
     
     body { 
         font-family: 'Inter', sans-serif; 
@@ -57,40 +82,91 @@
         width: var(--target-width); 
         animation: slideIn 2s cubic-bezier(0.1, 0.5, 0.5, 1) forwards;
     }
+section[id],
+#contacto {
+    scroll-margin-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .progress-bar-fill {
+        animation: none;
+    }
+}
 </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 bg-black/90 border-b border-white/5 p-4 backdrop-blur-md">
-        <div class="container mx-auto flex justify-between items-center text-[10px] tracking-[0.2em] uppercase">
-            <div class="gold-text font-bold">The Shadow of Adulthood</div>
-            <div class="hidden lg:flex space-x-8">
-                <a href="#investigacion" class="hover:text-white transition">Ikerketa</a>
-                <a href="#outputs" class="hover:text-white transition">Biltzarrak</a>
-                <a href="#sobre-mi" class="hover:text-white transition">Niri buruz</a>
-                <a href="#contacto" class="hover:text-white transition">Kontaktua</a>
-            </div>
-            <div class="flex space-x-3 items-center">
-    <a href="index.html" class="hover:text-gold transition cursor-pointer">EN</a>
-    <span class="opacity-20">|</span>
-    <a href="es.html" class="hover:text-gold transition cursor-pointer">ES</a>
-    <span class="opacity-20">|</span>
-    <a href="eu.html" class="hover:text-gold transition cursor-pointer">EU</a>
-</div>
-    </nav>
+    
+<nav aria-label="Main navigation"
+     class="fixed top-0 left-0 w-full z-50 bg-black/90 border-b border-white/5 p-4 backdrop-blur-md">
 
-    <header class="h-screen flex items-center justify-center px-6 hero-bg">
+    <div class="container mx-auto">
+
+        <!-- Barra principal -->
+        <div class="flex justify-between items-center gap-4">
+
+            <div class="gold-text font-bold text-[9px] sm:text-[10px] tracking-[0.12em] whitespace-nowrap">
+                The Shadow of Adulthood
+            </div>
+
+            <!-- Navegación de escritorio -->
+            <div class="hidden lg:flex space-x-8 text-[10px] tracking-[0.2em] uppercase">
+                <a href="#investigacion" class="hover:text-white transition">Research</a>
+                <a href="#outputs" class="hover:text-white transition">Conferences</a>
+                <a href="#sobre-mi" class="hover:text-white transition">About me</a>
+                <a href="#contacto" class="hover:text-white transition">Contact</a>
+            </div>
+
+            <!-- Idiomas y botón hamburguesa -->
+            <div class="flex items-center gap-3 text-[10px] tracking-[0.2em] uppercase">
+
+                <div class="flex space-x-3 items-center">
+                    <a href="index.html" class="hover:text-gold transition">EN</a>
+                    <span class="opacity-20">|</span>
+                    <a href="es.html" class="hover:text-gold transition">ES</a>
+                    <span class="opacity-20">|</span>
+                    <a href="eu.html" class="hover:text-gold transition">EU</a>
+                </div>
+
+                <button id="menu-toggle"
+                        type="button"
+                        class="lg:hidden text-gold text-2xl px-2 py-1"
+                        aria-label="Open navigation menu"
+                        aria-expanded="false"
+                        aria-controls="mobile-menu">
+                    <span id="menu-icon" aria-hidden="true">☰</span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Menú desplegable para móviles -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 mt-4 pt-4">
+            <div class="flex flex-col gap-4 text-[10px] tracking-[0.2em] uppercase">
+
+                <a href="#investigacion" class="hover:text-gold transition">Research</a>
+                <a href="#outputs" class="hover:text-gold transition">Conferences</a>
+                <a href="#sobre-mi" class="hover:text-gold transition">About me</a>
+                <a href="#contacto" class="hover:text-gold transition">Contact</a>
+
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+    <header class="min-h-screen flex items-center justify-center px-6 py-24 hero-bg">
         <div class="text-center">
-            <p class="uppercase tracking-[0.4em] text-[10px] mb-4 opacity-50">Literatura Konparatua · Ikasketa Gotikoak · Mitokritika</p>
-            <h1 class="text-5xl md:text-8xl text-white mb-4">The Shadow of <span class="italic font-light text-gray-400">Adulthood</span></h1>
-            <p class="gold-text italic text-xl md:text-2xl mb-8">Liminalitate gotikoa eta katabasia Harry Potteren ibilbidean</p>
+            <p class="uppercase tracking-[0.2em] sm:tracking-[0.4em] text-[10px] mb-4 opacity-50">Literatura Konparatua · Ikasketa Gotikoak · Mitokritika</p>
+            <h1 class="text-4xl sm:text-5xl md:text-8xl leading-tight text-white mb-4 max-w-4xl mx-auto">The Shadow of <span class="italic font-light text-gray-400">Adulthood</span></h1>
+            <p class="gold-text italic text-lg sm:text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed">Liminalitate gotikoa eta katabasia Harry Potteren ibilbidean</p>
             <div class="h-16 w-px bg-gold mx-auto opacity-50"></div>
         </div>
     </header>
 
-    <section id="investigacion" class="py-32 container mx-auto px-6 max-w-5xl">
+    <section id="investigacion" class="py-20 md:py-32 container mx-auto px-6 max-w-5xl">
         <h2 class="text-4xl gold-text mb-16 italic text-center">Iluntasunaren denbora-lerroa</h2>
-        <div class="grid md:grid-cols-3 gap-16">
+        <div class="grid md:grid-cols-3 gap-12 md:gap-16">
             <div class="text-center space-y-4">
                 <div class="text-5xl opacity-20 serif italic">I</div>
                 <h3 class="text-2xl text-white">Hasiera</h3>
@@ -158,14 +234,14 @@
 </div>
     </section>
 
-    <section id="outputs" class="py-32 bg-shadow px-6">
+    <section id="outputs" class="py-20 md:py-32 bg-shadow px-6">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-4xl gold-text mb-12 italic border-b border-white/5 pb-4">Kongresuak</h2>
             <div class="space-y-10">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2026 · Anbereseko Unibertsitatea</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">The Shadow of Adulthood: Darkness, Death and Development in​ <i>Harry Potter and the Goblet of Fire</i></h4>
+                        <h4 class="text-xl text-white group-hover:text-gold transition italic">The Shadow of Adulthood: Darkness, Death and Development in​ <i>Harry Potter and the Goblet of Fire</i></h4>
                         <p class="text-sm opacity-50">Mintegi interaktibo honetan, 32. kapituluan iluntasunak duen zeregina sakon aztertzen da.</p>
                     </div>
                     <a href="docs/Darkness_Death_Development_Slides.pdf" class="btn-action mt-4 md:mt-0">
@@ -175,7 +251,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2026 · Jarraipen-jardunaldiak</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Urteko Jarraipena (EHU)</h4>
+                        <h4 class="text-xl text-white group-hover:text-gold transition italic">Urteko Jarraipena (EHU)</h4>
                         <p class="text-sm opacity-50">Orain arteko aurrerapena: idazlearen biografia eta esparru teorikoa (bigarren zirriborroa), liburuen laburbilduma (lehen zirriborroa).</p>
                     </div>
                     <a href="docs/seguimiento-2026.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>
@@ -183,7 +259,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2025 · Jarraipen-jardunaldiak</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Urteko Jarraipena (EHU)</h4>
+                        <h4 class="text-xl text-white group-hover:text-gold transition italic">Urteko Jarraipena (EHU)</h4>
                         <p class="text-sm opacity-50">Orain arteko aurrerapena: idazlearen biografia eta esparru teorikoa (lehen zirriborroa).</p>
                     </div>
                     <a href="docs/seguimiento-2025.pdf" class="btn-action mt-4 md:mt-0"><i class="fas fa-download mr-2"></i> PPT</a>
@@ -191,7 +267,7 @@
                <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2025 · Myth in the Arts IX</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">To Death and Beyond: a comparative analysis of Harry Potter's Death in J. K. Rowling's <i>Deathly Hallows</i> and John Donne's 'Sonnet X'</h4>
+                        <h4 class="text-xl text-white group-hover:text-gold transition italic">To Death and Beyond: a comparative analysis of Harry Potter's Death in J. K. Rowling's <i>Deathly Hallows</i> and John Donne's 'Sonnet X'</h4>
                         <p class="text-sm opacity-50">Bi lan hauen azterketa konparatua, heriotzaren ikuspegi kristautik.</p>
                     </div>
                     <a href="docs/myth_arts_2025.pdf" class="btn-action mt-4 md:mt-0">
@@ -201,7 +277,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2024 · Myth in the Arts VIII</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">La Tragedia de Aristóteles en <i>Star Wars: Episodio III - La Venganza de los Sith</i></h4>
+                        <h4 class="text-xl text-white group-hover:text-gold transition italic">La Tragedia de Aristóteles en <i>Star Wars: Episodio III - La Venganza de los Sith</i></h4>
                         <p class="text-sm opacity-50">Anakin Skywalker Aristotelesen heroi tragikoaren definizioarekin bat datorren ala ez aztertu zen.</p>
                     </div>
                     <a href="docs/myth_arts_2024.pdf" class="btn-action mt-4 md:mt-0">
@@ -211,7 +287,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2023 · Myth in the Arts VII</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">Giants, Merpeople and Centaurs</h4>
+                        <h4 class="text-xl text-white group-hover:text-gold transition italic">Giants, Merpeople and Centaurs</h4>
                         <p class="text-sm opacity-50"><i>Harry Potterren</i> izaki antropomorfikoen azterketa multikulturala.</p>
                     </div>
                     <a href="docs/myth_arts_2023.pdf" class="btn-action mt-4 md:mt-0">
@@ -221,7 +297,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center group">
                     <div>
                         <span class="text-[10px] tracking-widest opacity-40 uppercase">2022 · Myth in the Arts VI</span>
-                        <h4 class="text-xl text-white group-hover:gold-text transition italic">The Shadow of Adulthood: Darkness as a Sign of Maturity in J. K. Rowling's Philosopher's Stone and Deathly Hallows</h4>
+                        <h4 class="text-xl text-white group-hover:text-gold transition italic">The Shadow of Adulthood: Darkness as a Sign of Maturity in J. K. Rowling's Philosopher's Stone and Deathly Hallows</h4>
                         <p class="text-sm opacity-50">Nire doktorego-proiektuaren aurkezpena.</p>
                     </div>
                     <a href="docs/myth_arts_2022.pdf" class="btn-action mt-4 md:mt-0">
@@ -232,21 +308,21 @@
         </div>
     </section>
 
-    <section id="sobre-mi" class="py-32 container mx-auto px-6 max-w-6xl">
-        <div class="grid md:grid-cols-2 gap-20 items-start">
+    <section id="sobre-mi" class="py-20 md:py-32 container mx-auto px-6 max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-10 md:gap-20 items-start">
             
             <div class="space-y-8">
-                <div class="flex items-center space-x-6">
-                    <div class="w-32 h-32 border border-gold p-1">
+                <div class="flex items-center gap-4 sm:gap-6">
+                    <div class="w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 border border-gold p-1">
                         <img src="img/perfil.jpg" alt="Foto de perfil" 
                             class="grayscale hover:grayscale-0 transition-all duration-700 w-full h-full object-cover relative z-10 cursor-pointer">
                     </div>
                     <div>
-                        <h2 class="text-3xl gold-text italic">Ikertzaileari buruz</h2>
+                        <h2 class="text-2xl sm:text-3xl gold-text italic">Ikertzaileari buruz</h2>
                         <p class="text-xs uppercase tracking-tighter opacity-50">Doktoregaia EHUn</p>
                     </div>
                 </div>
-                <div class="text-gray-300 space-y-6 text-justify">
+                <div class="text-gray-300 space-y-6 text-left sm:text-justify">
     <p>
         Euskal Herriko Unibertsitateko (EHU) Literatura Konparatuko hirugarren urteko doktoregaia naiz, eta  <i>Ikasketa Gotiko Garaikideen</i> eta <i>Mitokritikaren</i> elkargunean espezializatzen naiz. Nire doktorego-ikerketak, <i>The Shadow of Adulthood</i> izenekoak, konbentzio gotikoen egiturazko erabilera eta J. K. Rowlingen <i>Harry Potter</i> sagan agertzen den <i>descensus ad inferos</i> (<i>katabasia</i>) mito klasikoa aztertzen ditu. Nire ikerketaren helburua narrazioko iluntasunaren bilakaeraren eta protagonistaren heltze psikologikoaren arteko korrelazio argia ezartzea da.
     </p>
@@ -264,15 +340,15 @@
                 </p>
                 
                 <div class="flex space-x-6 text-xl pt-4">
-                    <a href="https://www.linkedin.com/in/leire-garc%C3%ADa-alonso/" target="_blank" class="hover:gold-text transition"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://ehu.academia.edu/LeireGarc%C3%ADaAlonso" target="_blank" class="hover:gold-text transition"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://orcid.org/0009-0008-8913-8722" target="_blank" class="hover:gold-text transition"><i class="fab fa-orcid"></i></a>
-                    <a href="https://www.researchgate.net/profile/Leire-Garcia-4?ev=hdr_xprf" target="_blank" class="hover:gold-text transition"><i class="fab fa-researchgate"></i></a>
-                    <a href="https://www.instagram.com/leiresgothicarchive/" target="_blank" class="hover:gold-text transition"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/leire-garc%C3%ADa-alonso/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-gold transition"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://ehu.academia.edu/LeireGarc%C3%ADaAlonso" target="_blank" rel="noopener noreferrer" aria-label="Academia.edu" class="hover:text-gold transition"><i class="fab fa-academia"></i></a>
+                    <a href="https://orcid.org/0009-0008-8913-8722" target="_blank" rel="noopener noreferrer" aria-label="ORCID" class="hover:text-gold transition"><i class="fab fa-orcid"></i></a>
+                    <a href="https://www.researchgate.net/profile/Leire-Garcia-4?ev=hdr_xprf" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate" class="hover:text-gold transition"><i class="fab fa-researchgate"></i></a>
+                    <a href="https://www.instagram.com/leiresgothicarchive/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-gold transition"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
-            <div id="contacto" class="bg-white/5 p-10 border border-white/5 backdrop-blur-sm">
+            <div id="contacto" class="bg-white/5 p-6 sm:p-8 md:p-10 border border-white/5 backdrop-blur-sm">
                 <h3 class="text-2xl mb-8 italic gold-text">Kontaktua</h3>
                 <form action="https://formspree.io/f/mvzrqqdg" method="POST" class="space-y-6">
                     <input type="text" name="name" placeholder="Izen-abizenak" class="w-full bg-transparent border-b border-white/10 py-3 focus:border-gold outline-none transition text-sm" required>
@@ -291,14 +367,45 @@
     </footer>
 
     <script>
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
-            });
-        }, observerOptions);
+        
+const menuButton = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuIcon = document.getElementById('menu-icon');
 
-        document.querySelectorAll('section').forEach(section => observer.observe(section));
+function closeMobileMenu() {
+    mobileMenu.classList.add('hidden');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation menu');
+    menuIcon.textContent = '☰';
+}
+
+menuButton.addEventListener('click', () => {
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+
+    if (isOpen) {
+        closeMobileMenu();
+    } else {
+        mobileMenu.classList.remove('hidden');
+        menuButton.setAttribute('aria-expanded', 'true');
+        menuButton.setAttribute('aria-label', 'Close navigation menu');
+        menuIcon.textContent = '×';
+    }
+});
+
+// Cierra el menú al seleccionar una sección
+mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+});
+
+// También permite cerrarlo con Escape
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMobileMenu();
+});
+
+// Cierra el menú al volver a la vista de escritorio
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024) closeMobileMenu();
+});
     </script>
 </body>
 </html>
